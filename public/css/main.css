@@ -1,5 +1,4 @@
 /* ---- Variables ---- */
-
 	:root {
 		--cal-bg-color: #041e42;
 		--cal-brand-color: #cf9700;
@@ -75,10 +74,6 @@
 		text-align: center;
 	}
 
-	#crest {
-		height: 100px !important;
-	}
-
 	.footer {
 		font-family: var(--sammy-font-family), sans-serif;
 		position: absolute;
@@ -109,6 +104,8 @@
 	.header-link {
 		font-family: var(--sammy-font-family), sans-serif;
 		font-size: 1.8rem;
+		background-color: var(--sammy-bg-color) !important;
+		color: var(--sammy-font-color) !important;
 	}
 
 	.header-link.style-link {
@@ -186,36 +183,14 @@
 		color: var(--sammy-font-color);
 	}
 
-	.navbar-fixed-top .container-fluid .navbar-header .navbar-brand {
-		font-family: var(--sammy-brand-font);
-		font-size: 150% !important;
-		color: var(--sammy-brand-color) !important;
-	}
-
-	.navbar-brand {
-		opacity: 0;
-	}
-
-	.navbar-fixed-top .container-fluid .navbar-collapse {
-		overflow-x: hidden;
+	.navbar .navbar-collapse {
+		text-align: center;
 	}
 
 	.navbar .navbar-nav {
 		display: inline-block;
 		float: none;
 		vertisammy-align: top;
-	}
-
-	.style-link {
-		overflow-x: hidden;
-	}
-
-	.navbar .navbar-collapse {
-		text-align: center;
-	}
-
-	.navbar-fixed-bottom {
-		margin-bottom: 0px;
 	}
 
 	.navbar.navbar-static-bottom {
@@ -231,6 +206,23 @@
 		display: none;
 	}
 
+	.navbar-brand {
+		opacity: 0;
+	}
+
+	.navbar-fixed-bottom {
+		margin-bottom: 0px;
+	}
+
+	.navbar-fixed-top .container-fluid .navbar-collapse {
+		overflow-x: hidden;
+	}
+
+	.navbar-fixed-top .container-fluid .navbar-header .navbar-brand {
+		font-family: var(--sammy-brand-font);
+		font-size: 150% !important;
+		color: var(--sammy-brand-color) !important;
+	}
 	.navbar-text.collapse {
 		display: inline-block;
 		text-align: center;
@@ -246,13 +238,7 @@
 		font-family: var(--sammy-font-family), sans-serif;
 	}
 
-	.parallax { 
-		/* The image used */
-		background-image: url("../img/rush/rush-1.jpg");
-
-		/* Set a specific height */
-		height: 85vh; 
-
+	.parallax {
 		/* Create the parallax scrolling effect */
 		background-attachment: fixed;
 		background-position: center;
@@ -262,11 +248,7 @@
 
 	.style-link {
 		text-decoration: none !important;
-	}
-
-	.header-link {
-		background-color: var(--sammy-bg-color) !important;
-		color: var(--sammy-font-color) !important;
+		overflow-x: hidden;
 	}
 
 	.style-link:hover {
@@ -274,12 +256,15 @@
 	}
 
 /* ---- IDs ---- */
-
 	#content {
 		width: 100%;
 		padding-top: 52px; /* 60px */
 		margin-bottom: 20px;
 		opacity: 0;
+	}
+
+	#crest {
+		height: 100px !important;
 	}
 
 	#crest-row {
@@ -318,13 +303,6 @@
 		text-align: center;
 	}
 
-	#map {
-		margin-top: 10px;
-		height: 60vh;
-		width: 100%;
-		border-radius: 1%;
-	}
-
 	#location-caption {
 		font-size: 125%;
 	}
@@ -333,6 +311,43 @@
 		margin-top: 0px;
 		padding-top: 1.5rem;
 		text-align: center;
+	}
+
+	#map {
+		margin-top: 10px;
+		height: 60vh;
+		width: 100%;
+		border-radius: 1%;
+	}
+
+	#parallax-one { 
+		/* The image used */
+		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrOFRrWkE0ZW1jbGc");
+
+		/* Set a specific height */
+		height: 85vh;
+	}
+
+	#parallax-two {
+		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ0VlVDE1djdLWUU");
+
+		background-position: 0px 0px !important;
+		/* Set a specific height */
+		height: 85vh;
+	}
+
+	#parallax-three {
+		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrY0VDMXdyZUFfMFE");
+
+		/* Set a specific height */
+		height: 85vh;
+	}
+
+	#parallax-four {
+		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ2dYdWRHc3hJWlE");
+
+		/* Set a specific height */
+		height: 85vh;
 	}
 
 	#social-buttons {
