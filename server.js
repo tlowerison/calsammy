@@ -22,7 +22,7 @@ db.on('error', function() {
 
 var brotherSchema = mongoose.model('Brother', new mongoose.Schema({
 	name: String,
-	year: Number,
+	year: String,
 	major: String,
 	position: String,
 	pclass: String,
