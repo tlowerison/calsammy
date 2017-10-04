@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Sigma Alpha Mu</title>
+
+		<base href="/">
+		
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrSFhCYzRQTGZjNFE" />
+
+		<link href='https://fonts.googleapis.com/css?family=Bellefair:500,300,700,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:500,300,700,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Rubik:500,300,700,400' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Raleway:500,300,700,400' rel='stylesheet' type='text/css'>
+
+		<link href="public/css/main.css" rel="stylesheet" />
+
+		<!-- Bootstrap CDN -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<!-- Angular CDN -->
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+
+		<!-- Local Router -->
+		<script src="app.js"></script>
+
+		<!-- Services -->
+		<script src="services/brotherService.js"></script>
+
+		<!-- Controllers -->
+		<script src="controllers/header.js"></script>
+		<script src="controllers/home.js"></script>
+		<script src="controllers/brothers.js"></script>
+		<script src="controllers/activities.js"></script>
+		<script src="controllers/creed.js"></script>
+		<script src="controllers/rush.js"></script>
+		<script src="controllers/footer.js"></script>
+	</head>
+	<body ng-app="MyApp">
+		<div ng-include="'partials/header.html'"></div>
+		<div id="content" ng-view></div>
+		<div ng-include="'partials/footer.html'"></div>
+	</body>
+</html>

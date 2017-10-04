@@ -1,0 +1,22 @@
+<div class="page-wrapper" ng-controller="BrothersCtrl" ng-init="init()">
+	<div class="container" ng-repeat="group in members" ng-show="group.members.length > 0">
+		<div class="row group">
+			<div class="group-title">
+				<h1>{{group.type}}</h1>
+			</div>
+			<div onmousedown="return false" class="member-wrapper col-xs-6 col-sm-6 col-md-3 col-lg-3 col-xl-3" ng-repeat="member in group.members">
+				<div class="member">
+					<img class="member-pic" src="https://drive.google.com/uc?export=view&id={{member.imgkey}}">
+					<div class="member-caption">
+						<div class="member-text">
+							<div class="member-name"><b>{{member.name}}</b></div>
+							<div class="member-position"><b>{{member.position}}</b></div>
+							<div class="member-major">{{member.major}}, {{member.year}}</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<br><br>
+	</div>
+</div>

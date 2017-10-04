@@ -1,0 +1,13 @@
+<div class="page-wrapper" ng-controller="HomeCtrl" ng-init="init()">
+	<div id="home-carousel" class="carousel slide carousel-fade dynamic-height" data-ride="carousel">
+		<!-- Carousel Indicators -->
+		<ol class="carousel-indicators">
+			<li data-target="#home-carousel" data-slide-to="{{image.index}}" class="{{image.class}}" ng-repeat="image in images"></li>
+		</ol>
+		<!-- Carousel items -->
+		<div class="carousel-inner">
+			<div class="item {{image.class}}" id="home-item-{{image.index}}" style="background-image: url('https://drive.google.com/uc?export=view&id={{image.key}}'); background-size: cover; background-position: 50% 0;" ng-repeat="image in images">
+			</div>
+		</div>
+	</div>
+</div>
