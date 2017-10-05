@@ -1,4 +1,4 @@
-app.controller("BrothersCtrl", function($scope, brotherService) {
+app.controller("BrothersCtrl", function($scope, $http) {
 	$scope.img_resize = function() {
 		$('.member-pic').css('height', $('.member-pic').width());
 	}
@@ -7,8 +7,13 @@ app.controller("BrothersCtrl", function($scope, brotherService) {
 		$($scope.img_resize);
 		$(window).on('resize', $scope.img_resize);
 		loadFirstVisit();
-		$scope.data = brotherService.get();
-		$scope.members = loadBrothers($scope.data);
+		$http.get("../brothers.json").then(function(res) {
+			if (typeof res.data.db == "undefined") {
+				window.location.reload();
+			}
+			$scope.data = res.data.db;
+			$scope.members = loadBrothers($scope.data);
+		});
 	}
 });
 

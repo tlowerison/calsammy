@@ -30,21 +30,21 @@ var brotherSchema = mongoose.model('Brother', new mongoose.Schema({
 }),
 'brothers');
 
-
 mongoose.model('Brother').find({}, function(err, docs) {
-	brothers = docs;
+    fs.writeFile('brothers.json', JSON.stringify({db: docs}));
+    console.log('write json');
 });
 
 var app = express();
-app.set('port', process.env.PORT || 3090);
+app.set('port', process.env.PORT || 3001);
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
 app.use(express.static(path.join(__dirname, './')));
 
-app.get('/brothers', function(req, res) {
-	res.send(brothers);
+app.get('*', function(req, res) {
+	res.sendFile(__dirname + '/index.html');
 })
 
 // Production error handler

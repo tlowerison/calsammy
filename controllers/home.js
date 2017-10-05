@@ -91,20 +91,16 @@ app.controller('HomeCtrl', function($scope, $http) {
 
 var loadFirstVisit = function() {
 	if (firstVisit == 0) {
-		$('#content').animate({opacity: "1.0"}, 600, function() {
+		setTimeout(function() {
+			$('.navbar-header .navbar-brand').animate({opacity: "1.0"}, 600);
+		}, 0);
+		$('.header-link.style-link').each(function(i) {
+			var link = this;
 			setTimeout(function() {
-				$('.navbar-header .navbar-brand').animate({opacity: "1.0"}, 600);
-			}, 0);
-			$('.header-link.style-link').each(function(i) {
-				var link = this;
-				setTimeout(function() {
-					$(link).animate({top: "0px"});
-				}, 75 * (i + 2));
-			});
+				$(link).animate({top: "0px"});
+			}, 75 * (i + 2));
 		});
 		firstVisit = 1;
-	} else {
-		$('#content').animate({opacity: "1.0"}, 600);
 	}
 }
 

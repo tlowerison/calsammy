@@ -137,10 +137,6 @@ app.controller("ActivitiesCtrl", function($scope) {
 					"class": ""
 				},
 				{
-					"key": "0B23ZW2d0WWSraExnLVdLNTVkdmM",
-					"class": ""
-				},
-				{
 					"key": "0B23ZW2d0WWSraUI4WVFTbUR2dGs",
 					"class": ""
 				},
