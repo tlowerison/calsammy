@@ -32,11 +32,10 @@ var brotherSchema = mongoose.model('Brother', new mongoose.Schema({
 
 mongoose.model('Brother').find({}, function(err, docs) {
     fs.writeFile('brothers.json', JSON.stringify({db: docs}));
-    console.log('write json');
 });
 
 var app = express();
-app.set('port', process.env.PORT || 3001);
+app.set('port', process.env.PORT || 3004);
 app.use(compression());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));

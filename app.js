@@ -25,3 +25,5 @@ app
 		templateUrl: "partials/404.html"
 	});
 });
+
+firstVisit = 0;

@@ -1,5 +1,5 @@
 app.controller('CreedCtrl', function($scope) {
 	$scope.init = function() {
-		loadFirstVisit();
+		$(document).ready(loadFirstVisit);
 	}
 });

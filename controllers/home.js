@@ -2,7 +2,7 @@ app.controller('HomeCtrl', function($scope, $http) {
 	$scope.images = [
 		{
 			index: 0,
-			key: '0B23ZW2d0WWSrbEY5S3IzTy1xTGc',
+			key: '0B23ZW2d0WWSrdVdjM3o0Vi1POEk',
 			title: 'Slide 1',
 			caption: 'This is the caption for the first slide...',
 			class: 'active'
@@ -54,23 +54,15 @@ app.controller('HomeCtrl', function($scope, $http) {
 	$scope.size = $(window).width < 768 ? 'small' : 'large';
 
 	$scope.img_resize = function() {
-		var div = $('.dynamic-height');
+		var div = $('.carousel-full');
 		if ($(window).width() < 768 && $scope.size == 'large') {
 			$('#carousel-wrapper').css('background-color', '#444');
-
-			div.animate({
-				'opacity': '0.4'
-			}, 400);
-
+			$('.page-title').css('font-size', '4.5rem');
 			$('.carousel-indicators').animate({opacity: '0'}, 400);
 			$scope.size = 'small';
 		} else if ($(window).width() >= 768 && $scope.size == 'small') {
 			$('#carousel-wrapper').css('background-color', '#fff');
-
-			div.animate({
-				'opacity': '1'
-			}, 400);
-
+			$('.page-title').css('font-size', '6rem');
 			$('.carousel-indicators').animate({opacity: '1'}, 400);
 			$scope.size = 'large';
 		}
@@ -78,14 +70,14 @@ app.controller('HomeCtrl', function($scope, $http) {
 
 	$scope.init = function() {
 		$scope.img_resize();
-
 		$(window).on('resize', $scope.img_resize);
-
 		$('.carousel').carousel({
 			interval: 3000
 		});
+		$(document).ready(loadFirstVisit());
+		$('.carousel').removeClass('carousel-sm');
+		$('.carousel').removeClass('carousel-md');
 
-		loadFirstVisit();
 	};
 });
 
@@ -103,5 +95,3 @@ var loadFirstVisit = function() {
 		firstVisit = 1;
 	}
 }
-
-firstVisit = 0;

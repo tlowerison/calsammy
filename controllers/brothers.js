@@ -6,7 +6,7 @@ app.controller("BrothersCtrl", function($scope, $http) {
 	$scope.init = function() {
 		$($scope.img_resize);
 		$(window).on('resize', $scope.img_resize);
-		loadFirstVisit();
+		$(document).ready(loadFirstVisit);
 		$http.get("../brothers.json").then(function(res) {
 			if (typeof res.data.db == "undefined") {
 				window.location.reload();

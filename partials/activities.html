@@ -1,29 +1,32 @@
 <div class="page-wrapper" ng-controller="ActivitiesCtrl" ng-init="init()">
+	<p class="rush-title page-title">Activities</p>	
 	<div class="container" ng-repeat="activity in activities">
-		<div class="row group">
-			<!-- Activity Title -->
-			<div class="group-title">
-				<h1>{{activity.title}}</h1>
-			</div>
+		<div class="row" style="width: 100%">
+			<div class="col group">
+				<!-- Activity Title -->
+				<div class="group-title">
+					<h1>{{activity.title}}</h1>
+				</div>
 
-			<div class="activity-wrapper">
-				<!-- Activity Carousel -->
-				<div id="{{activity.key}}-carousel" class="carousel slide carousel-fade dynamic-height" data-ride="carousel" data-interval="false">
-					<!-- Carousel items -->
-					<div class="carousel-inner">
-						<div class="item {{image.class}}" style="background-image: url('https://drive.google.com/uc?export=view&id={{image.key}}'); background-size: cover; background-position: 50% 0;" ng-repeat="image in activity.images">
+				<div class="activity-wrapper">
+					<!-- Activity Carousel -->
+					<div id="{{activity.key}}-carousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="false">
+						<!-- Carousel items -->
+						<div class="carousel-inner">
+							<div class="item {{image.class}}" style="background-image: url('https://drive.google.com/uc?export=view&id={{image.key}}'); background-size: cover; background-position: 50% 0;" ng-repeat="image in activity.images">
+							</div>
 						</div>
-					</div>
 
-					<!-- Left and right controls -->
-					<a class="left carousel-control" data-target="#{{activity.key}}-carousel" data-slide="prev">
-						<span class="glyphicon glyphicon-chevron-left"></span>
-						<span class="sr-only">Previous</span>
-					</a>
-					<a class="right carousel-control" data-target="#{{activity.key}}-carousel" data-slide="next">
-						<span class="glyphicon glyphicon-chevron-right"></span>
-						<span class="sr-only">Next</span>
-					</a>
+						<!-- Left and right controls -->
+						<a class="left carousel-control" data-target="#{{activity.key}}-carousel" data-slide="prev">
+							<span class="glyphicon glyphicon-chevron-left"></span>
+							<span class="sr-only">Previous</span>
+						</a>
+						<a class="right carousel-control" data-target="#{{activity.key}}-carousel" data-slide="next">
+							<span class="glyphicon glyphicon-chevron-right"></span>
+							<span class="sr-only">Next</span>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>

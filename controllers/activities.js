@@ -43,11 +43,11 @@ app.controller("ActivitiesCtrl", function($scope) {
 					class: "active"
 				},
 				{
-					key: "0B23ZW2d0WWSrM0cwbjZJeVplSTg",
+					key: "0B23ZW2d0WWSrS2NlY1lEdElHZFE",
 					class: ""
 				},
 				{
-					key: "0B23ZW2d0WWSrS2NlY1lEdElHZFE",
+					key: "0B23ZW2d0WWSrM0cwbjZJeVplSTg",
 					class: ""
 				},
 				{
@@ -160,30 +160,29 @@ app.controller("ActivitiesCtrl", function($scope) {
 		}
 	];
 
-	$scope.size = $(window).width < 768 ? 'small' : 'large';
-
 	$scope.img_resize = function() {
-		var div = $('.dynamic-height');
-		if ($(window).width() < 768 && $scope.size == 'large') {
-			div.css('height', '50vh');
-			div.css('margin-left', '2vh');
-			div.css('margin-right', '2vh');
-			$scope.size = 'small';
-		} else if ($(window).width() >= 768 && $scope.size == 'small') {
-			div.css('height', '70vh');
-			div.css('margin-left', '10vh');
-			div.css('margin-right', '10vh');
-			$scope.size = 'large';
+		var div = $('.carousel');
+		if ($(window).width() < 768 && $scope.size == 'md') {
+			div.addClass('carousel-sm');
+			div.removeClass('carousel-md');
+			$scope.size = 'sm';
+		} else if ($(window).width() >= 768 && $scope.size == 'sm') {
+			div.addClass('carousel-md');
+			div.removeClass('carousel-sm');
+			$scope.size = 'md';
 		}
 	}
 
-	$scope.init = function() {
+	$(document).ready(function(event) {
+		$scope.size = $(window).width < 768 ? 'md' : 'sm';
 		$scope.img_resize();
+	});
+
+	$scope.init = function() {
+		$(document).ready(loadFirstVisit);
 		$(window).on('resize', $scope.img_resize);
 		$('.carousel').carousel({
 			interval: false
 		});
-
-		loadFirstVisit();
 	};
 });

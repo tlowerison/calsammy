@@ -2,12 +2,10 @@ app.controller("RushCtrl", function($scope) {
 	$scope.block_resize = function() {
 		if ($(window).width() < 975 && $scope.size == 'md') {
 			$scope.size = 'sm';
-			$('.parallax-block').removeClass('parallax-block-md');
-			$('.parallax-block').addClass('parallax-block-sm');
+			$('#right-rush-sched').css('margin-top', '0rem');
 		} else if ($(window).width() >= 975 && $scope.size == 'sm') {
 			$scope.size = 'md';
-			$('.parallax-block').removeClass('parallax-block-sm');
-			$('.parallax-block').addClass('parallax-block-md');
+			$('#right-rush-sched').css('margin-top', '1.75rem');
 		}
 	}
 
@@ -20,24 +18,29 @@ app.controller("RushCtrl", function($scope) {
 			// Store hash
 			var hash = this.hash;
 			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 			$('html, body').animate({
-				scrollTop: $(hash).offset().top
+				scrollTop: $(links[this.id][0]).offset().top - links[this.id][1]
 			}, 1200, function(){
 				// Add hash (#) to URL when done scrolling (default click behavior)
-				window.location.hash = hash;
+				// window.location.hash = hash;
 			});
+			if(this.id == 'down-link-1') {
+				$(this).fadeOut(250);
+			}
 		}
 	});
 
 	$scope.init = function() {
-		loadFirstVisit();
-		$scope.size = $(window).width < 975 ? 'sm' : 'md';
-		if ($scope.size == 'sm') {
-			$('.parallax-block').addClass('parallax-block-sm');
-		} else {
-			$('.parallax-block').addClass('parallax-block-md');
-		}
+		$(document).ready(loadFirstVisit);
+		// Give $scope.size incorrect initial value to trigger block_resize
+		$scope.size = $(window).width() < 975 ? 'md' : 'sm';
 		$(window).on('resize', $scope.block_resize);
+		$scope.block_resize();
 	};
 });
+
+var links = {
+	'down-link-1': ['#block1', 110],
+	'down-link-2': ['#block2', 65],
+	'down-link-3': ['#block3', 65]
+}
