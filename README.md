@@ -10,3 +10,5 @@ Basic Description:<br />
   -Brothers page with hoverable icons giving name year and major of brother<br />
   -Activities page consisting of multiple carousels<br />
   -Rush page with parallax scrolling<br />
+<br />
+ Note: Mobile is currently broken, more development soon to come!
