@@ -4,14 +4,16 @@ app.controller("RushCtrl", function($scope) {
 			$scope.size = 'sm';
 
 			$('#down-link-2, #down-link-3').hide(0);
-			$('#right-rush-sched').css({'margin-top': '0rem'});
 			$('.rush-caption').css({'font-size': '3rem'});
+			$('#right-rush-sched').css({'margin-top': '0rem'});
+			$('#candidates-stat, #brotherhood-stat').css({'margin-top': '15px'});
 		} else if ($(window).width() >= 975 && $scope.size == 'sm') {
 			$scope.size = 'md';
 
 			$('#down-link-2, #down-link-3').show(0);
-			$('#right-rush-sched').css({'margin-top': '1.75rem'});
 			$('.rush-caption').css({'font-size': '3.5rem'});
+			$('#right-rush-sched').css({'margin-top': '1.75rem'});
+			$('#candidates-stat, #brotherhood-stat').css({'margin-top': '0px'});
 		}
 	}
 
