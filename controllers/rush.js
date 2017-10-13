@@ -2,10 +2,14 @@ app.controller("RushCtrl", function($scope) {
 	$scope.block_resize = function() {
 		if ($(window).width() < 975 && $scope.size == 'md') {
 			$scope.size = 'sm';
+
 			$('#right-rush-sched').css('margin-top', '0rem');
+			$('#down-link-2, #down-link-3').hide(0);
 		} else if ($(window).width() >= 975 && $scope.size == 'sm') {
 			$scope.size = 'md';
+
 			$('#right-rush-sched').css('margin-top', '1.75rem');
+			$('#down-link-2, #down-link-3').show(0);
 		}
 	}
 

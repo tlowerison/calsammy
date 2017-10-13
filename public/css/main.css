@@ -281,10 +281,8 @@
 		font-size: 8rem !important;
 		text-align: center;
 		padding: 15px;
-
 		position: relative; 
 		margin: 50px;
-
 		border: 10px solid transparent;
 		-webkit-border-image: url(border.png) 20% round; /* Safari 3.1-5 */
 		-o-border-image: url(border.png) 20% round; /* Opera 11-12.1 */
@@ -292,13 +290,7 @@
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
 		-webkit-box-sizing: border-box;
-
 		display: table;
-	}
-
-	.row {
-		border: 2px solid white;
-		display: table-row;
 	}
 
 	.parallax-block:before {
@@ -309,6 +301,11 @@
 		right: 1px;
 		bottom: 1px;
 		border: 10px dashed rgb(0,0,0);
+	}
+
+	.row {
+		border: 2px solid white;
+		display: table-row;
 	}
 
 	.row {
@@ -412,33 +409,28 @@
 	}
 
 	#parallax-one { 
-		/* The image used */
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrOFRrWkE0ZW1jbGc");
-
-		/* Set a specific height */
 		height: 85vh;
+		transition: height 999999s
 	}
 
 	#parallax-two {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ0VlVDE1djdLWUU");
-
 		background-position: 0px 0px !important;
-		/* Set a specific height */
 		height: 85vh;
+		transition: height 999999s
 	}
 
 	#parallax-three {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSraExnLVdLNTVkdmM");
-
-		/* Set a specific height */
 		height: 85vh;
+		transition: height 999999s
 	}
 
 	#parallax-four {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ2dYdWRHc3hJWlE");
-
-		/* Set a specific height */
 		height: 85vh;
+		transition: height 999999s
 	}
 
 	#right-rush-sched {
