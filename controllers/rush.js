@@ -3,13 +3,15 @@ app.controller("RushCtrl", function($scope) {
 		if ($(window).width() < 975 && $scope.size == 'md') {
 			$scope.size = 'sm';
 
-			$('#right-rush-sched').css('margin-top', '0rem');
 			$('#down-link-2, #down-link-3').hide(0);
+			$('#right-rush-sched').css({'margin-top': '0rem'});
+			$('.rush-caption').css({'font-size': '3rem'});
 		} else if ($(window).width() >= 975 && $scope.size == 'sm') {
 			$scope.size = 'md';
 
-			$('#right-rush-sched').css('margin-top', '1.75rem');
 			$('#down-link-2, #down-link-3').show(0);
+			$('#right-rush-sched').css({'margin-top': '1.75rem'});
+			$('.rush-caption').css({'font-size': '3.5rem'});
 		}
 	}
 
