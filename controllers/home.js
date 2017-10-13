@@ -72,7 +72,7 @@ app.controller('HomeCtrl', function($scope, $http) {
 		$scope.img_resize();
 		$(window).on('resize', $scope.img_resize);
 		$('.carousel').carousel({
-			interval: 3000
+			interval: 4000
 		});
 		$(document).ready(loadFirstVisit());
 		$('.carousel').removeClass('carousel-sm');
