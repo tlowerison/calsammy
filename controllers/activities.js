@@ -163,18 +163,18 @@ app.controller("ActivitiesCtrl", function($scope) {
 	$scope.img_resize = function() {
 		var div = $('.carousel');
 		if ($(window).width() < 768 && $scope.size == 'md') {
+			$scope.size = 'sm';
 			div.addClass('carousel-sm');
 			div.removeClass('carousel-md');
-			$scope.size = 'sm';
 		} else if ($(window).width() >= 768 && $scope.size == 'sm') {
+			$scope.size = 'md';
 			div.addClass('carousel-md');
 			div.removeClass('carousel-sm');
-			$scope.size = 'md';
 		}
 	}
 
 	$(document).ready(function(event) {
-		$scope.size = $(window).width < 768 ? 'md' : 'sm';
+		$scope.size = $(window).width() < 768 ? 'md' : 'sm';
 		$scope.img_resize();
 	});
 

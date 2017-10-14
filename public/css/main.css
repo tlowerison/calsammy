@@ -252,14 +252,18 @@
 	.page-title {
 		padding-top: 0px !important;
 		padding-bottom: 15px;
-		color: #041e42;
 		font-family: 'Cambria' !important;
 		text-align: center;
-		text-decoration-color: #ffc72c !important;
+		color: #ffc72c;
 		text-decoration: underline;
 		text-decoration-style: double;
+		-moz-text-decoration-style: double;
+		-webkit-text-decoration-style: double;
 		line-height: 1.1;
 		margin-bottom: 0px !important;
+	}
+	.page-title span {
+		color: #041e42;
 	}
 
 	.page-wrapper {
@@ -285,6 +289,7 @@
 		border: 10px solid transparent;
 		-webkit-border-image: url(border.png) 20% round; /* Safari 3.1-5 */
 		-o-border-image: url(border.png) 20% round; /* Opera 11-12.1 */
+		-webkit-border-image: url(border.png) 20% round;
 		border-image: url(border.png) 20% round;
 		box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -514,7 +519,7 @@
 
 	.carousel-sm {
 		height: 40vh;
-		width: 70vw;
+		width: 85vw;
 		margin: auto;
 	}
 
