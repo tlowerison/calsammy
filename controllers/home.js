@@ -51,30 +51,11 @@ app.controller('HomeCtrl', function($scope, $http) {
 		},
 	];
 
-	$scope.size = $(window).width < 768 ? 'small' : 'large';
-
-	$scope.img_resize = function() {
-		var div = $('.carousel-full');
-		if ($(window).width() < 768 && $scope.size == 'large') {
-			$('#carousel-wrapper').css('background-color', '#444');
-			$('.page-title').css('font-size', '4.5rem');
-			$('.carousel-indicators').animate({opacity: '0'}, 400);
-			$scope.size = 'small';
-		} else if ($(window).width() >= 768 && $scope.size == 'small') {
-			$('#carousel-wrapper').css('background-color', '#fff');
-			$('.page-title').css('font-size', '6rem');
-			$('.carousel-indicators').animate({opacity: '1'}, 400);
-			$scope.size = 'large';
-		}
-	}
-
 	$scope.init = function() {
-		$scope.img_resize();
-		$(window).on('resize', $scope.img_resize);
+		$(document).ready(loadFirstVisit());
 		$('.carousel').carousel({
 			interval: 4000
 		});
-		$(document).ready(loadFirstVisit());
 		$('.carousel').removeClass('carousel-sm');
 		$('.carousel').removeClass('carousel-md');
 	};

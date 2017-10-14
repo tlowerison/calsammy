@@ -83,4 +83,35 @@ var loadFirstVisit = function() {
 		});
 		firstVisit = 1;
 	}
+
+	var carousel = $('.carousel');
+	if (device == "mobile") {
+		// home
+		$('#carousel-wrapper').css('background-color', '#444');
+		$('.page-title').css('font-size', '4.5rem');
+		$('.carousel-indicators').animate({opacity: '0'}, 400);
+		// activities
+		carousel.addClass('carousel-sm');
+		carousel.removeClass('carousel-md');
+		$('.group-title').css({'font-size': '2.5rem'});
+		// rush
+		$('#down-link-2, #down-link-3').hide(0);
+		$('.rush-caption').css({'font-size': '3rem'});
+		$('#right-rush-sched').css({'margin-top': '0rem'});
+		$('#candidates-stat, #brotherhood-stat').css({'margin-top': '15px'});
+	} else {
+		// home
+		$('#carousel-wrapper').css('background-color', '#fff');
+		$('.page-title').css('font-size', '6rem');
+		$('.carousel-indicators').animate({opacity: '1'}, 400);
+		// activities
+		carousel.addClass('carousel-md');
+		carousel.removeClass('carousel-sm');
+		$('.group-title').css({'font-size': '3rem'});
+		// rush		
+		$('#down-link-2, #down-link-3').show(0);
+		$('.rush-caption').css({'font-size': '3.5rem'});
+		$('#right-rush-sched').css({'margin-top': '1.75rem'});
+		$('#candidates-stat, #brotherhood-stat').css({'margin-top': '0px'});
+	}
 }

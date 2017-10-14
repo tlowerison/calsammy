@@ -160,27 +160,8 @@ app.controller("ActivitiesCtrl", function($scope) {
 		}
 	];
 
-	$scope.img_resize = function() {
-		var div = $('.carousel');
-		if ($(window).width() < 768 && $scope.size == 'md') {
-			$scope.size = 'sm';
-			div.addClass('carousel-sm');
-			div.removeClass('carousel-md');
-		} else if ($(window).width() >= 768 && $scope.size == 'sm') {
-			$scope.size = 'md';
-			div.addClass('carousel-md');
-			div.removeClass('carousel-sm');
-		}
-	}
-
-	$(document).ready(function(event) {
-		$scope.size = $(window).width() < 768 ? 'md' : 'sm';
-		$scope.img_resize();
-	});
-
 	$scope.init = function() {
 		$(document).ready(loadFirstVisit);
-		$(window).on('resize', $scope.img_resize);
 		$('.carousel').carousel({
 			interval: false
 		});
