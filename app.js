@@ -59,7 +59,7 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 
 var loadFirstVisit = function() {
 	if (device == "mobile") {
-		$('body').css({'margin-bottom': static_heights['body'].toString() + 'px'});
+		//$('body').css({'margin-bottom': static_heights['body'].toString() + 'px'});
 		$('.carousel-md').css({'height': static_heights['.carousel-md'].toString() + 'px'});
 		$('.carousel-sm').css({'height': static_heights['.carousel-sm'].toString() + 'px'});
 		$('.center-con').css({'height': static_heights['.center-con'].toString() + 'px'});
