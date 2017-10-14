@@ -132,10 +132,6 @@
 	    background: linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
 	}
 
-	.jumbotron {
-		height: 80vh;
-	}
-
 	.member, .activity {
 		position: relative;
 	}
@@ -278,6 +274,7 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		text-align: center;
+		height: 85vh;
 	}
 
 	.parallax-block {
@@ -396,42 +393,21 @@
 		text-align: center;
 	}
 
-	#location-caption {
-		font-size: 125%;
-	}
-
-	#location-header {
-		margin-top: 0px;
-		padding-top: 1.5rem;
-		text-align: center;
-	}
-
-	#map {
-		margin-top: 10px;
-		height: 60vh;
-		width: 100%;
-		border-radius: 1%;
-	}
-
 	#parallax-one { 
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrOFRrWkE0ZW1jbGc");
-		height: 85vh;
 	}
 
 	#parallax-two {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ0VlVDE1djdLWUU");
 		background-position: 0px 0px !important;
-		height: 85vh;
 	}
 
 	#parallax-three {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSraExnLVdLNTVkdmM");
-		height: 85vh;
 	}
 
 	#parallax-four {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ2dYdWRHc3hJWlE");
-		height: 85vh;
 	}
 
 	#right-rush-sched {
