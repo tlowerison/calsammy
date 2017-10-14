@@ -31,6 +31,7 @@
 		position: relative;
 		min-height: 100%;
 		background-color: white;
+		transition: height 999999s;
 	}
 
 	body {
@@ -415,26 +416,22 @@
 	#parallax-one { 
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrOFRrWkE0ZW1jbGc");
 		height: 85vh;
-		transition: height 999999s
 	}
 
 	#parallax-two {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ0VlVDE1djdLWUU");
 		background-position: 0px 0px !important;
 		height: 85vh;
-		transition: height 999999s
 	}
 
 	#parallax-three {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSraExnLVdLNTVkdmM");
 		height: 85vh;
-		transition: height 999999s
 	}
 
 	#parallax-four {
 		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ2dYdWRHc3hJWlE");
 		height: 85vh;
-		transition: height 999999s
 	}
 
 	#right-rush-sched {
