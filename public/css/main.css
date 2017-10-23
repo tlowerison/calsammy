@@ -126,11 +126,11 @@
 
 	.image-gradient {
 		background: -moz-linear-gradient(bottom, rgba(255,255,255,0) 0%, rgba(255,255,255,0.8) 100%);
-	    background: -webkit-gradient(linear, bottom, top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.8)));
-	    background: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
-	    background: -o-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
-	    background: -ms-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
-	    background: linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
+		background: -webkit-gradient(linear, bottom, top, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(255,255,255,0.8)));
+		background: -webkit-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
+		background: -o-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
+		background: -ms-linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
+		background: linear-gradient(bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,0.8) 100%);
 	}
 
 	.member, .activity {
@@ -351,7 +351,7 @@
 	}
 
 	#crest-row {
-		margin-bottom: 10px;
+		margin-bottom: 15px;
 	}
 
 	#crest-wrapper {
