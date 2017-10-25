@@ -9,11 +9,11 @@ app.controller("ActivitiesCtrl", function($scope) {
 					"class": "active"
 				},
 				{
-					"key": "0B23ZW2d0WWSrdEoyR0Q3SDJraTA",
+					"key": "0B23ZW2d0WWSrd2VMX3JnbGs0RkU",
 					"class": ""
 				},
 				{
-					"key": "0B23ZW2d0WWSrd2VMX3JnbGs0RkU",
+					"key": "0B23ZW2d0WWSrdEoyR0Q3SDJraTA",
 					"class": ""
 				},
 				{
