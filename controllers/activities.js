@@ -6,7 +6,7 @@ app.controller("ActivitiesCtrl", function($scope) {
 			"images": [
 				{
 					"key": "0B23ZW2d0WWSrOG1fZ1lTX2xVckk",
-					"class": ""
+					"class": "active"
 				},
 				{
 					"key": "0B23ZW2d0WWSrdEoyR0Q3SDJraTA",
@@ -18,7 +18,7 @@ app.controller("ActivitiesCtrl", function($scope) {
 				},
 				{
 					"key": "0B23ZW2d0WWSrSDYyUHdWS09scDA",
-					"class": "active"
+					"class": ""
 				},
 				{
 					"key": "0B23ZW2d0WWSrLUZ5ZndMbWRkUUk",
