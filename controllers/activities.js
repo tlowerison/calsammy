@@ -5,6 +5,18 @@ app.controller("ActivitiesCtrl", function($scope) {
 			"key": "bro-trips",
 			"images": [
 				{
+					"key": "0B23ZW2d0WWSrOG1fZ1lTX2xVckk",
+					"class": ""
+				},
+				{
+					"key": "0B23ZW2d0WWSrdEoyR0Q3SDJraTA",
+					"class": ""
+				},
+				{
+					"key": "0B23ZW2d0WWSrd2VMX3JnbGs0RkU",
+					"class": ""
+				},
+				{
 					"key": "0B23ZW2d0WWSrSDYyUHdWS09scDA",
 					"class": "active"
 				},
@@ -14,18 +26,6 @@ app.controller("ActivitiesCtrl", function($scope) {
 				},
 				{
 					"key": "0B23ZW2d0WWSrQ3RRMkFlcXhibkk",
-					"class": ""
-				},
-				{
-					"key": "0B23ZW2d0WWSrd2VMX3JnbGs0RkU",
-					"class": ""
-				},
-				{
-					"key": "0B23ZW2d0WWSrdEoyR0Q3SDJraTA",
-					"class": ""
-				},
-				{
-					"key": "0B23ZW2d0WWSrOG1fZ1lTX2xVckk",
 					"class": ""
 				},
 				{
