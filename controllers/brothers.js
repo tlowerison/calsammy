@@ -7,11 +7,8 @@ app.controller("BrothersCtrl", function($scope, $http) {
 		$(document).ready(loadFirstVisit);
 		$scope.img_resize();
 		$(window).on('resize', $scope.img_resize);
-		$http.get("../brothers.json").then(function(res) {
-			if (typeof res.data.db == "undefined") {
-				window.location.reload();
-			}
-			$scope.data = res.data.db;
+		$http.get('/brothers-data').then(function(res) {
+			$scope.data = res.data;
 			$scope.members = loadBrothers($scope.data);
 		});
 	}
@@ -54,14 +51,13 @@ var groups = {
 		"Recorder"
 	],
 	"Chairholders": [
-		"Rush Chair",
+		"Rush Chairman",
 		"Candidate Educator",
-		"Brotherhood Chair",
-		"Social Chair",
-		"Alumni Relations Chair",
+		"Brotherhood Chairman",
+		"Social Chairman",
+		"Alumni Relations Chairman",
 		"House Manager",
-		"Philanthropy Chair",
-		"Scholarship Chair"
+		"Philanthropy Chairman",
+		"Scholarship Chairman"
 	]
 }
-

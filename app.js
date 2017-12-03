@@ -1,7 +1,6 @@
 var app = angular.module("MyApp", ["ngRoute"]);
 
-app
-.config(function($routeProvider, $locationProvider) {
+app.config(function($routeProvider, $locationProvider) {
 	$locationProvider.html5Mode(true);
 	$locationProvider.hashPrefix("");
 
@@ -26,7 +25,6 @@ app
 	});
 });
 
-var firstVisit = 0;
 var var_heights = {
 	"body": ["margin-bottom", 5],
 	".carousel-md": ["height", 60],
@@ -47,6 +45,7 @@ var static_heights = {
 	".carousel-sm": 0,
 	".center-con": 0
 }
+// Device type
 var device = "";
 
 if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
@@ -58,8 +57,8 @@ if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(naviga
 }
 
 var loadFirstVisit = function() {
+	// Mobile Device element resizing.
 	if (device == "mobile") {
-		//$('body').css({'margin-bottom': static_heights['body'].toString() + 'px'});
 		$('.carousel-md').css({'height': static_heights['.carousel-md'].toString() + 'px'});
 		$('.carousel-sm').css({'height': static_heights['.carousel-sm'].toString() + 'px'});
 		$('.center-con').css({'height': static_heights['.center-con'].toString() + 'px'});
@@ -67,22 +66,10 @@ var loadFirstVisit = function() {
 		$('.rush-title').css({'margin-bottom': static_heights['.rush-title'].toString() + 'px'});
 		$('#home-crest').css({'padding-top': static_heights['#home-crest'].toString() + 'px'});
 		$('#s-a-n').css({'margin-top': static_heights['#s-a-n'].toString() + 'px'});
-		console.log(static_heights["#s-a-n"]);
-	} else {
-		console.log(device);
 	}
-	if (firstVisit == 0) {
-		setTimeout(function() {
-			$('.navbar-header .navbar-brand').animate({opacity: "1.0"}, 600);
-		}, 0);
-		$('.header-link.style-link').each(function(i) {
-			var link = this;
-			setTimeout(function() {
-				$(link).animate({top: "0px"});
-			}, 75 * (i + 2));
-		});
-		firstVisit = 1;
-	}
+
+
+	$('.navbar-header .navbar-brand').animate({opacity: "1.0"}, 600);
 
 	var carousel = $('.carousel');
 	if (device == "mobile") {

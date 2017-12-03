@@ -110,10 +110,7 @@
 		font-size: 1.8rem;
 		background-color: var(--sammy-bg-color) !important;
 		color: var(--sammy-font-color) !important;
-	}
-
-	.header-link.style-link {
-		top: -50px;
+		cursor: pointer;
 	}
 
 	.icon-bar {
