@@ -15,7 +15,7 @@
 		<link href='https://fonts.googleapis.com/css?family=Rubik:500,300,700,400' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Raleway:500,300,700,400' rel='stylesheet' type='text/css'>
 
-		<link href="public/css/main.css" rel="stylesheet" />
+		<link href="css/main.css" rel="stylesheet" />
 
 		<!-- Bootstrap CDN -->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -26,20 +26,23 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
+		<!-- Global Variables -->
+		<script src="scripts/globals.js"></script>
+
 		<!-- Local Router -->
-		<script src="app.js"></script>
+		<script src="scripts/routes.js"></script>
 
 		<!-- Services -->
-		<script src="services/brotherService.js"></script>
+		<script src="scripts/services/data.js"></script>
 
 		<!-- Controllers -->
-		<script src="controllers/header.js"></script>
-		<script src="controllers/home.js"></script>
-		<script src="controllers/brothers.js"></script>
-		<script src="controllers/activities.js"></script>
-		<script src="controllers/creed.js"></script>
-		<script src="controllers/rush.js"></script>
-		<script src="controllers/footer.js"></script>
+		<script src="scripts/controllers/header.js"></script>
+		<script src="scripts/controllers/home.js"></script>
+		<script src="scripts/controllers/brothers.js"></script>
+		<script src="scripts/controllers/activities.js"></script>
+		<script src="scripts/controllers/creed.js"></script>
+		<script src="scripts/controllers/rush.js"></script>
+		<script src="scripts/controllers/footer.js"></script>
 	</head>
 	<body ng-app="MyApp">
 		<div ng-include="'partials/header.html'"></div>

@@ -1,30 +1,3 @@
-var app = angular.module("MyApp", ["ngRoute"]);
-
-app.config(function($routeProvider, $locationProvider) {
-	$locationProvider.html5Mode(true);
-	$locationProvider.hashPrefix("");
-
-	$routeProvider
-	.when("/", {
-		templateUrl: "partials/home.html"
-	})
-	.when("/brothers", {
-		templateUrl: "partials/brothers.html"
-	})
-	.when("/activities", {
-		templateUrl: "partials/activities.html"
-	})
-	.when("/creed", {
-		templateUrl: "partials/creed.html"
-	})
-	.when("/rush", {
-		templateUrl: "partials/rush.html"
-	})
-	.otherwise({
-		templateUrl: "partials/404.html"
-	});
-});
-
 var var_heights = {
 	"body": ["margin-bottom", 5],
 	".carousel-md": ["height", 60],
@@ -68,9 +41,6 @@ var loadFirstVisit = function() {
 		$('#s-a-n').css({'margin-top': static_heights['#s-a-n'].toString() + 'px'});
 	}
 
-
-	$('.navbar-header .navbar-brand').animate({opacity: "1.0"}, 600);
-
 	var carousel = $('.carousel');
 	if (device == "mobile") {
 		// home
@@ -101,4 +71,62 @@ var loadFirstVisit = function() {
 		$('#right-rush-sched').css({'margin-top': '1.75rem'});
 		$('#candidates-stat, #brotherhood-stat').css({'margin-top': '0px'});
 	}
+}
+
+var links = {
+	'down-link-1': ['#block0', 110],
+	'down-link-2': ['#block1', 65],
+	'down-link-3': ['#block2', 65]
+}
+
+function img_resize() {
+	$('.member-pic').css('height', $('.member-pic').width());
+}
+
+function loadBrothers(data) {
+	var members = [
+		{
+			"type": "Council",
+			"members": []
+		},
+		{
+			"type": "Chairholders",
+			"members": []
+		},
+		{
+			"type": "Actives",
+			"members": []
+		}
+	];
+	var type = 0;
+	for (var i = data.length - 1; i >= 0; i--) {
+		if (groups["Council"].indexOf(data[i].position) >= 0) {
+			type = 0;
+		} else if (groups["Chairholders"].indexOf(data[i].position) >= 0) {
+			type = 1;
+		} else {
+			type = 2;
+		}
+		members[type].members.unshift(data[i]);
+	}
+	return members;
+}
+
+var groups = {
+	"Council": [
+		"Prior",
+		"Vice Prior",
+		"Exchequer",
+		"Recorder"
+	],
+	"Chairholders": [
+		"Rush Chairman",
+		"Candidate Educator",
+		"Brotherhood Chairman",
+		"Social Chairman",
+		"Alumni Relations Chairman",
+		"House Manager",
+		"Philanthropy Chairman",
+		"Scholarship Chairman"
+	]
 }

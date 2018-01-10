@@ -77,6 +77,10 @@
 		text-align: center;
 	}
 
+	.down-arrow {
+		cursor: pointer;
+	}
+
 	.footer {
 		font-family: var(--sammy-font-family), sans-serif;
 		position: absolute;
@@ -214,10 +218,6 @@
 
 	.navbar .navbar-text {
 		display: none;
-	}
-
-	.navbar-brand {
-		opacity: 0;
 	}
 
 	.navbar-fixed-bottom {
@@ -390,23 +390,6 @@
 		margin-top: 5px;
 		font-size: 2.8rem;
 		text-align: center;
-	}
-
-	#parallax-one { 
-		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrOFRrWkE0ZW1jbGc");
-	}
-
-	#parallax-two {
-		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ0VlVDE1djdLWUU");
-		background-position: 50% 0% !important;
-	}
-
-	#parallax-three {
-		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSraExnLVdLNTVkdmM");
-	}
-
-	#parallax-four {
-		background-image: url("https://drive.google.com/uc?export=view&id=0B23ZW2d0WWSrZ2dYdWRHc3hJWlE");
 	}
 
 	#right-rush-sched {
