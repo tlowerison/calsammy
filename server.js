@@ -18,7 +18,7 @@ app.use(express.static(__dirname + "/public"));
 // Individual pages are designed and provided
 // using AngularJS routing
 app.get("/:page(brothers|activities|creed|rush)", function(req, res) {
-	res.sendFile(__dirname + "public/index.html");
+	res.sendFile(__dirname + "/public/index.html");
 });
 
 // General purpose endpoint for getting
