@@ -20,7 +20,8 @@ app.controller("RushCtrl", function($scope, dataFactory) {
 			$scope.$apply(function() {
 				var doc = res.data[0];
 				for (var i in doc.images)
-					$("#parallax" + i.toString()).css("background-image", "url(\"https://drive.google.com/uc?export=view&id=" + doc.images[i] + "\")");
+					$("#parallax" + i.toString()).css("background-image", "url('https://drive.google.com/a/berkeley.edu/uc?export=view&id=" + doc.images[i] + "')");
+				
 				for (var i in doc.panels)
 					for (var j in doc.panels[i])
 						$("#block" + i.toString()).append(doc.panels[i][j]);

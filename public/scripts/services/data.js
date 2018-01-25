@@ -4,7 +4,7 @@ app.factory("dataFactory", function($http) {
 	return {
 		get: function(page) {
 			return new Promise(function(resolve) {
-				if (pageData[page] != undefined) resolve(pageData[page]);
+				if (pageData[page] != undefined) resolve(Object.assign({}, pageData[page]));
 				else {
 					$http.get("/" + page + "-data").then(function(res) {
 						pageData[page] = res;

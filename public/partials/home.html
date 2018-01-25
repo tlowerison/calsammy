@@ -1,13 +1,12 @@
-<script src="scripts/controllers/home.js"></script>
 <div class="page-wrapper" ng-init="init()">
-	<div id="home-carousel" class="carousel slide carousel-fade carousel-full" data-ride="carousel">
+	<div id="home-carousel" class="carousel slide carousel-fade carousel-full lazy" data-ride="carousel">
 		<!-- Carousel Indicators -->
 		<ol class="carousel-indicators">
 			<li data-target="#home-carousel" data-slide-to="{{image.index}}" class="{{image.class}}" ng-repeat="image in images"></li>
 		</ol>
 		<!-- Carousel items -->
 		<div class="carousel-inner">
-			<div class="item {{image.class}}" id="home-item-{{image.index}}" style="background-image: url('https://drive.google.com/uc?export=view&id={{image.key}}'); background-size: cover; background-position: 50% 0;" ng-repeat="image in images">
+			<div class="item {{image.class}}" id="home-item-{{image.index}}" style="background-size: cover; background-position: 50% 0; width: 100%; height: 100%" ng-repeat="image in images">
 				<p class="rush-title image-gradient page-title"><span>ΣAM</span></p>
 			</div>
 		</div>
